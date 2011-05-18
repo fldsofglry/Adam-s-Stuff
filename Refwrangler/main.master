@@ -1,0 +1,65 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="main.master.cs" Inherits="main" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+    <link href="styles/main.css" rel="stylesheet" type="text/css" />
+
+    
+   
+    
+</head>
+<body>
+    
+    <form  id="form1" runat="server">
+    <div id="header">
+        <div id="logo">
+            <img alt="RefWrangler Logo" src="images/RefWhiteOnBlack2.png" />
+        </div>
+        <div id="header-login">
+            <div class="login-inputs">
+                <input class="login-textbox" id="login_username" type="text" value="username" name="login_username" />
+                <input class="login-textbox" id="login_password" type="password" value="password" name="login_password" />
+                <input id="login_submit" type="submit" value="Login" name="login_submit" />
+            </div>
+        </div>
+    </div>
+    
+    <div id="nav-bg">
+        
+        <div id="nav">
+            <ul class="right">
+                <li>
+                    <asp:HyperLink ID="lnkHome" NavigateUrl="~/Default.aspx" runat="server">Home</asp:HyperLink>
+                </li>
+                <li>
+                    <asp:HyperLink ID="lnkGameEntry" NavigateUrl="~/GameEntry.aspx" runat="server">Game Entry</asp:HyperLink>
+                </li>
+                <li>
+                    <asp:HyperLink ID="lnkProfile" NavigateUrl="~/MyProfile.aspx" runat="server">My Profile</asp:HyperLink>
+                </li>
+                <li>
+                    <asp:HyperLink ID="lnkRefManage" NavigateUrl="~/RefereeManage.aspx" runat="server">Referees</asp:HyperLink>
+                </li>
+                <li>
+                    <asp:HyperLink ID="lnkRegister" NavigateUrl="~/Register.aspx" runat="server">Register</asp:HyperLink>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="container">
+        
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+            
+            </asp:ContentPlaceHolder>
+        
+    </div>
+    </form>
+</body>
+</html>
